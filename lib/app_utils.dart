@@ -1,7 +1,6 @@
 library app_utils;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'src/launch_app.dart';
+export 'src/logger_utils.dart';
+export 'src/object_extensions.dart';
+export 'src/string_extensions.dart';

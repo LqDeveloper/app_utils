@@ -1,7 +1,7 @@
 name: app_utils
-description: A new Flutter project.
+description: app_utils is used for app.
 version: 0.0.1
-homepage:
+homepage: https://github.com/LqDeveloper/app_utils.git
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
