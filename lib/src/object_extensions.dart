@@ -1,6 +1,5 @@
-
-extension ObjectExtensions on Object{
-  T map<T>(T f(dynamic e)){
+extension GetDynamicUtils<T> on T {
+  T map<T>(T f(dynamic e)) {
     return f(this);
   }
 }

@@ -86,7 +86,25 @@ extension ContextExtensions on BuildContext {
   bool get isTablet => isSmallTablet || isLargeTablet;
 
   ///展示SnackBar
-  void showSnackBar(SnackBar snackBar){
-    ScaffoldMessenger.of(this).showSnackBar(snackBar);
+  ScaffoldFeatureController<SnackBar, SnackBarClosedReason> showSnackBar(
+      SnackBar snackBar) {
+    return ScaffoldMessenger.of(this).showSnackBar(snackBar);
+  }
+
+  ///展示BottomSheet
+  PersistentBottomSheetController<T> showBottomSheet<T>(
+    WidgetBuilder builder, {
+    Color? backgroundColor,
+    double? elevation,
+    ShapeBorder? shape,
+    Clip? clipBehavior,
+    AnimationController? transitionAnimationController,
+  }) {
+    return Scaffold.of(this).showBottomSheet(builder,
+        backgroundColor: backgroundColor,
+        elevation: elevation,
+        shape: shape,
+        clipBehavior: clipBehavior,
+        transitionAnimationController: transitionAnimationController);
   }
 }
